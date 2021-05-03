@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Noliktavai24</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Plaukti noliktavām, garāžām, mājsaimniecībai. Tērauda plaukti ar cinka apdari.">
+        <meta name="keywords" content="Olaukti, Noliktavai, plaukti noliktavai, cinkoti plaukti, cinkoti, metāla.">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+
+            $(document).ready(function(){
+                $("#lang_switch").hide();
+
+                $("#lang_button").click(function(){
+                    $("#lang_button").hide();
+                    $("#lang_switch").show();
+                });
+                $("#close_lang").click(function(){
+                    $("#lang_switch").hide();
+                    $("#lang_button").show();
+                });
+            });
+
+            function slowScroll(id) {
+                $('html,body').animate({
+                    scrollTop: $(id).offset().top
+                }, 500);
+            };
+
+            $(document).on('scroll', function () {
+                if($(window).scrollTop() === 0)
+                    $("header").removeClass("fixed");
+                else
+                    $("header").attr("class", "fixed");
+            });
+            function onClick(element) {
+                document.getElementById("img2").src = element.src;
+                document.getElementById("modal2").style.display = "block";
+            }
+
+/* OPEN MODAL IMAGES GALLERY*/
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+        </script>
+
+    </head>
+    <body>
+
+        <!-- HEADER -->
+        <header>
+         
+            <div id="logo" onclick="slowScroll('#top')">
+                <span>Noliktavai24</span>
+            </div>
+            <div id="about">
+                <a href="#" title="Super-1-2-3" onclick="slowScroll('#main')">Безвинтовая система</a>
+                <a href="#" title="Katalogs" onclick="slowScroll('#catalogue')">Каталог</a>
+                <a href="#" title="Kontakti" onclick="slowScroll('#exp_gallery')">Галерия</a>
+                <a href="#" title="Kontakti" onclick="slowScroll('#contacts')">Контакты</a>
+
+            </div>
+            <button id="lang_button">
+                <img src="icons/IconRU.png">
+            </button>
+            <div id="lang_switch">
+                <a href="index.html"><img src="icons/IconLV.png">Lv</a>
+                <a href="Noliktavai24Eng.html"><img src="icons/IconUK.png">Eng</a>
+                <button id="close_lang">Закрыть</button>
+            </div>
+
+        </header>
+
+         <!-- GREETING PHRASE -->
+         <div id="top">
+            <h1>Полки</h1>
+            <h3>для любых амбиций.</h3>
+        </div>  
+
+        <!-- SUPER 1-2-3 INFORMATION -->
+        <div id="main">
+
+            <div class="intro">
+                <h2 >Безвинтовая система</h2>
+                <span>Безвинтовая полочная система BITO - система без винтов, удовлетворяющая потребности любого хранилища. Полки безвинтовочной системи включают быструю комплектацию, легкость и быстрое перемещение. Отделка продукта обеспечит прочность и защиту от коррозии.</span>
+            </div>
+
+            <img src="Pictures/pirma.png" style="max-width: 35%; cursor:pointer;" onclick="onClick(this)" class="modal-hover-opacity2">
+            
+
+            <!-- TEXT-->
+            <div class="text">
+               <h3>Основные функции безвинтовочной системи:</h3> <br />
+                <span>
+                    • отличная грузоподъемность и производительность;<br />
+                    • можно использовать в общественных помещениях – в магазинах, офисах, для медицинского инвентаря, а также для хранения продуктов;<br />
+                    • отлично пригодится как в доме, так и в индустриальных условиях;<br />
+                    • неуничтожаемый благодаря прочности стали и отделке цинка;<br />
+                    • составные части конструкции изготовлены из сертифицированной стали;<br />
+                    • эффективное решение в плане затрат.
+
+                </span>
+            </div>
+
+            <!-- TABLE -->
+            <div id="table">
+            <table>
+                <tr><th colspan="4" id="caption" style="color: #00a4eb;font-size: 1.3em;">Доступные материалы</th></tr>
+                <tr>
+                  <th></th>
+                  <th>Выcoтa</th>
+                  <th>Шиpина</th>
+                  <th>Длина</th>
+                </tr>
+                <tr>
+                  <td>Рама</td>
+                  <td>2500мм</td>
+                  <td>500мм</td>
+                  <td>900мм</td>
+                </tr>
+                <tr>
+                  <td>Рама</td>
+                  <td>2000мм</td>
+                  <td>500мм</td>
+                  <td>900мм</td>
+                </tr>
+                <tr>
+                  <td>Основа полки</td>
+                  <td>-</td>
+                  <td>500мм</td>
+                  <td>900мм</td>
+                </tr>
+                <tr>
+                  <td>Балка шин</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>900мм</td>
+                </tr>
+            </table>
+            </div>
+
+            <!-- SHELL BOX INFO-->
+            <div class="shellbox">
+            
+                <div id="shellinfo">
+                    <img src="Pictures/support.jpg" style="cursor:pointer;" onclick="onClick(this)" class="modal-hover-opacity2">
+                    <div class="boxes_content">
+                        <h4>Опоры</h4>
+                        <p>
+                            Высокая грузоподъемность благодаря структурированному адвантированному профилю.
+                        <br />
+                        <br />
+                        Оптимальное использование пространства благодаря узким профилям опоры 50 мм
+                        </p>
+                    </div>
+            
+                            
+                </div>
+            
+                <div id="shellinfo">
+                    <img src="Pictures/supportframe.jpg" style="cursor:pointer;" onclick="onClick(this)" class="modal-hover-opacity2">
+                    <div class="boxes_content">
+                        <h4>Рама</h4>
+                        <p>
+                            Простая сборка на месте и простое приспособление к условиям помещения.
+                            <br />
+                            <br />
+                            Индивидуальное приспособление высоты для нужд каждого помещения с шагом 25 мм.
+                        </p>
+                    </div>
+            
+                </div>
+            
+                <div id="shellinfo">
+                    <img src="Pictures/shelves.jpg" style="cursor:pointer;" onclick="onClick(this)" class="modal-hover-opacity2">
+                    <div class="boxes_content">
+                        <h4>Полки</h4>
+                        <p>
+                            Стабильные полки и опорная система - длинные края в форме стабильной коробки, глубокие углы с трехкратными бортиками безопасности.
+                            <br />
+                            <br />
+                            Высокая стабильность благодаря закрепляющим в продольном направлении шариками и углам, соединенным под давлениемю
+. 
+                        </p>
+                    </div>
+            
+                </div>
+                                
+            </div> 
+
+            <!-- ICONS -->
+            <div class="icons">
+                <div id="image">                
+                    <img src="Pictures/sizeicon.png" >            
+                    <span>25мм вертикальное повышение</span>
+                </div>
+                <div id="image">
+                    <img src="Pictures/galvanised.png">
+                    <span>Отделка цинка</span>
+                </div>    
+                <div id="image">
+                    <img src="Pictures/cornericon.png" >
+                    <span>90° углы</span>
+                </div>
+                <div id="image">
+                    <img src="Pictures/noscrews.png" >
+                    <span>Без винтов</span>
+                </div>
+                <div id="image">
+                    <img src="Pictures/withhandsicon.png" >
+                    <span>Загружаемая руками</span>
+                </div>
+            </div>
+        </div>             
+        
+                        <!-- KATALOGS -->
+
+                        <div id="catalogue">
+
+                            <h2>Каталог</h2> 
+                
+                            <div class="product_info">
+                                <h3>Для дома</h3>
+                                <div id="product_description">
+                                  Полки безвинтовой системы объединяют простоту, вместимость и легкую сборку.Поэтому они пригодятся любому домашнему хозяйству, независимо от его жителей и их потребностей.
+                                </div>
+
+                                <div id="catalogue_images">
+                                    <div class="row">
+                                        <div class="column">
+                                          <img src="Pictures/majam1.jpeg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                                        </div>
+                                        <div class="column">
+                                          <img src="Pictures/majam2.jpeg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                                        </div>
+                                        <div class="column">
+                                            <img src="Pictures/Bilde9.jpeg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                                        </div>
+                                        <div class="column">
+                                            <img src="Pictures/Bilde10.jpeg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                                          </div>
+
+                                    
+                                    </div>
+                                </div>
+
+                            </div>
+                
+                            <div class="product_info">
+                                <h3>Для гаража</h3>
+                                <div id="product_description">
+                                  Любому гаражу необходимы качественные полки, не только для инструментов, но и для хранения шин.
+                                  Система безвинтовых полок предлагает специальную комплектацию, именно для хранения шин автомобилей.
+                                </div>
+                                <div id="catalogue_images">
+                                    <div class="row">
+                                        <div class="column">
+                                          <img src="Pictures/garazai.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+                                        </div>
+                                        <div class="column">
+                                          <img src="Pictures/shell garazai.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+                                        </div>
+                                        <div class="column">
+                                            <img src="Pictures/Bilde2.jpeg" onclick="openModal();currentSlide(7)" class="hover-shadow">
+                                          </div>
+                                          <div class="column">
+                                            <img src="Pictures/Bilde5.jpeg" onclick="openModal();currentSlide(8)" class="hover-shadow">
+                                          </div>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="product_info">
+                                <h3>Для склада</h3>
+                                <div id="product_description">
+                                  С полкамы безвинтовой системы можно удовлетворить любые требования склада.
+                                   Стальная конструкция обеспечит прочность и длительное служение.
+                                </div>
+                                <div id="catalogue_images">
+                                 <div class="row">
+                                    <div class="column">
+                                        <img src="Pictures/noliktavai.jpeg" onclick="openModal();currentSlide(9)" class="hover-shadow">
+                                    </div>
+                                    <div class="column">
+                                        <img src="Pictures/shellnoliktavai2.jpeg" onclick="openModal();currentSlide(10)" class="hover-shadow">
+                                    </div>
+                                    <div class="column">
+                                        <img src="Pictures/undefined.jpg" onclick="openModal();currentSlide(11)" class="hover-shadow">
+                                    </div>
+                                 </div>
+                                </div>
+                            </div>
+                
+                            <div class="product_info">
+                                <h3>Для офиса</h3>
+                                <div id="product_description">
+                                  Система безвинтовых полок отлично подойдет и к офисной среде.
+                                  Блестящие металлические полки прекрасно освежят офисную среду и выдержат даже самые тяжелые папки.
+                                </div>
+                                <div id="catalogue_images"> 
+                                    <div class="row">
+                                        <div class="column">
+                                            <img src="Pictures/majammapes.jpeg" onclick="openModal();currentSlide(12)" class="hover-shadow">
+                                        </div>
+                                        <div class="column">
+                                            <img src="Pictures/undefined.jpg" onclick="openModal();currentSlide(13)" class="hover-shadow">
+                                        </div>
+                                        <div class="column">
+                                            <img src="Pictures/Bilde10.jpeg" onclick="openModal();currentSlide(14)" class="hover-shadow">
+                                        </div>
+                                     </div>
+                                </div>
+                            </div>
+                
+                            <div class="product_info">
+                                <h3>Для магазина</h3>
+                                <div id="product_description">
+                                  Полки безвинтовой системы отлично послужат для нужд любого магазина.
+                                  Высокая грузоподъемность и приспособляемая емкость позволит размещать самую разнообразную продукцию,
+                                   а также послужить как интересный элемент интерьера.
+                                </div>
+                                <div id="catalogue_images">
+                                    <div class="row">
+                                        <div class="column">
+                                            <img src="Pictures/undefined (1).jpeg" onclick="openModal();currentSlide(15)" class="hover-shadow">
+                                        </div>
+                                        <div class="column">
+                                            <img src="Pictures/shellnoliktavai2.jpeg" onclick="openModal();currentSlide(16)" class="hover-shadow">
+                                        </div>
+
+                                        <div class="column">
+                                            <img src="Pictures/undefined.jpg" onclick="openModal();currentSlide(17)" class="hover-shadow">
+                                        </div>                                                              
+                                    </div>
+
+                                </div>
+                            </div>
+                
+                            <div class="product_info">
+                                <h3>Специалние</h3>
+                                <div id="product_description">
+                                  Благодаря твердой стальной конструкции и отделке цинка система безвинтовых полок отлично послужит инвентарю,
+                                  имеющему контакт с водой или агрессивной средой. 
+                                  Можно заказать полки синего и красного цвета. 
+                                </div>
+                                <div id="catalogue_images">
+                                    <div class="row">
+                                        <div class="column">
+                                            <img src="Pictures/SPECIALIE.jpeg" onclick="openModal();currentSlide(18)" class="hover-shadow">
+                                        </div>
+                                        <div class="column">
+                                            <img src="Pictures/undefined.jpg" onclick="openModal();currentSlide(19)" class="hover-shadow">
+                                        </div>
+                                        <div class="column">
+                                            <img src="Pictures/shell garazai.jpg" onclick="openModal();currentSlide(20)" class="hover-shadow">
+                                        </div>                                                            
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+
+                        <!-- The Modal/Lightbox -->
+                        <div id="myModal" class="modal">
+                          <span class="closeCursor" onclick="closeModal()">&times;</span>
+                          <div class="modal-content">
+                        
+                            <div class="mySlides">
+                              <div class="numbertext">Для дома</div>
+                              <img src="Pictures/majam1.jpeg">
+                            </div>
+                        
+                            <div class="mySlides">
+                              <div class="numbertext">Для дома</div>
+                              <img src="Pictures/majam2.jpeg">
+                            </div>
+                      
+                            <div class="mySlides">
+                              <div class="numbertext">Для дома</div>
+                              <img src="Pictures/Bilde9.jpeg">
+                            </div>
+                      
+                            <div class="mySlides">
+                              <div class="numbertext">Для дома</div>
+                              <img src="Pictures/Bilde10.jpeg">
+                            </div>
+                        
+                            <div class="mySlides">
+                              <div class="numbertext">Для гаража</div>
+                              <img src="Pictures/garazai.jpg">
+                            </div>
+                        
+                            <div class="mySlides">
+                              <div class="numbertext">Для гаража</div>
+                              <img src="Pictures/shell garazai.jpg">
+                            </div>
+                      
+                            <div class="mySlides">
+                              <div class="numbertext">Для гаража</div>
+                              <img src="Pictures/Bilde2.jpeg">
+                            </div>
+                        
+                            <div class="mySlides">
+                              <div class="numbertext">Для гаража</div>
+                              <img src="Pictures/Bilde5.jpeg">
+                            </div>
+                      
+                        
+                            <div class="mySlides">
+                              <div class="numbertext">Для склада</div>
+                              <img src="Pictures/noliktavai.jpeg">
+                            </div>
+                        
+                            <div class="mySlides">
+                              <div class="numbertext">Для склада</div>
+                              <img src="Pictures/shellnoliktavai2.jpeg">
+                            </div>
+                        
+                            <div class="mySlides">
+                              <div class="numbertext">Для склада</div>
+                              <img src="Pictures/undefined.jpg">
+                            </div>
+                      
+                      
+                            <div class="mySlides">
+                              <div class="numbertext">Для офиса</div>
+                              <img src="Pictures/majammapes.jpeg">
+                            </div>
+                        
+                            <div class="mySlides">
+                              <div class="numbertext">Для офиса</div>
+                              <img src="Pictures/undefined.jpg">
+                            </div>
+                      
+                            <div class="mySlides">
+                              <div class="numbertext">Для офиса</div>
+                              <img src="Pictures/Bilde10.jpeg">
+                            </div>
+                      
+                        
+                            <div class="mySlides">
+                              <div class="numbertext">Для магазина</div>
+                              <img src="Pictures/undefined (1).jpeg">
+                            </div>
+                        
+                            <div class="mySlides">
+                              <div class="numbertext">Для магазина</div>
+                              <img src="Pictures/shellnoliktavai2.jpeg">
+                            </div>
+                      
+                      
+                        
+                            <div class="mySlides">
+                              <div class="numbertext">Для магазина</div>
+                              <img src="Pictures/undefined.jpg">
+                            </div>
+                      
+                            <div class="mySlides">
+                              <div class="numbertext">Специалние</div>
+                              <img src="Pictures/SPECIALIE.jpeg">
+                            </div>
+                      
+                      
+                            <div class="mySlides">
+                              <div class="numbertext">Специалние</div>
+                              <img src="Pictures/undefined.jpg">
+                            </div>
+                        
+                            <div class="mySlides">
+                              <div class="numbertext">Специалние</div>
+                              <img src="Pictures/shell garazai.jpg">
+                            </div>
+                      
+                            <div class="mySlides">
+                              <img src="Pictures/galleryRU.png">
+                             </div>
+                            <div class="mySlides">
+                              <div class="numbertext">Галерия</div>
+                              <img src="Pictures/Bilde2.jpeg">
+                             </div>
+                             <div class="mySlides">
+                               <div class="numbertext">Галерия</div>
+                              <img src="Pictures/Bilde3.jpeg">
+                             </div>
+                             <div class="mySlides">
+                               <div class="numbertext">Галерия</div>
+                              <img src="Pictures/Bilde4.jpeg">
+                             </div>
+                             <div class="mySlides">
+                               <div class="numbertext">Галерия</div>
+                              <img src="Pictures/Bilde5.jpeg">
+                             </div>
+                             <div class="mySlides">
+                               <div class="numbertext">Галерия</div>
+                              <img src="Pictures/Bilde6.jpeg">
+                             </div>
+                             <div class="mySlides">
+                               <div class="numbertext">Галерия</div>
+                              <img src="Pictures/Bilde7.jpeg">
+                             </div>
+                             <div class="mySlides">
+                               <div class="numbertext">Галерия</div>
+                              <img src="Pictures/Bilde8.jpeg">
+                             </div>
+                             <div class="mySlides">
+                               <div class="numbertext">Галерия</div>
+                              <img src="Pictures/Bilde9.jpeg">
+                             </div>
+                             <div class="mySlides">
+                               <div class="numbertext">Галерия</div>
+                              <img src="Pictures/Bilde10.jpeg">
+                             </div>
+                             <div class="mySlides">
+                               <div class="numbertext">Галерия</div>
+                              <img src="Pictures/garazai.jpg">
+                             </div>
+                             <div class="mySlides">
+                               <div class="numbertext">Галерия</div>
+                              <img src="Pictures/majam1.jpeg">
+                             </div>
+                             <div class="mySlides">
+                               <div class="numbertext">Галерия</div>
+                              <img src="Pictures/majam2.jpeg">
+                             </div>
+                             <div class="mySlides">
+                               <div class="numbertext">Галерия</div>
+                              <img src="Pictures/majammapes.jpeg">
+                             </div>
+                             <div class="mySlides">
+                               <div class="numbertext">Галерия</div>
+                              <img src="Pictures/noliktavai.jpeg">
+                             </div>
+                             <div class="mySlides">
+                               <div class="numbertext">Галерия</div>
+                              <img src="Pictures/shell garazai.jpg">
+                             </div>
+                             <div class="mySlides">
+                               <div class="numbertext">Галерия</div>
+                              <img src="Pictures/shellnoliktavai2.jpeg">
+                             </div>
+                             <div class="mySlides">
+                               <div class="numbertext">Галерия</div>
+                              <img src="Pictures/SPECIALIE.jpeg">
+                             </div>
+                             <div class="mySlides">
+                               <div class="numbertext">Галерия</div>
+                              <img src="Pictures/undefined (1).jpeg">
+                             </div>
+                             <div class="mySlides">
+                              <div class="numbertext">Галерия</div>
+                              <img src="Pictures/undefined.jpg">
+                             </div>
+                             <div class="mySlides">
+                              <img src="Pictures/catalogueRU.png">
+                             </div>
+                                 <!-- Next/previous controls -->
+                                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                      
+                                  
+                      
+                          </div>
+                      
+                        </div>
+                      
+                                    <!-- GALLERY -->
+                      
+                                      <div id="exp_gallery">
+                      
+                                        <h2>Галерия</h2>
+                      
+                                        
+                                        <div class="row">
+                                          <div class="column" id="galleryIMGhidden">
+                                            <img src="Pictures/Galerija.png" onclick="openModal();currentSlide(21)" class="hover-shadow">
+                                          </div>
+                                          <div class="column" id="galleryPics">
+                                            <img src="Pictures/Bilde2.jpeg" onclick="openModal();currentSlide(22)" class="hover-shadow" id="galleryIMG">
+                                          </div>
+                                          <div class="column" id="galleryPics">
+                                            <img src="Pictures/Bilde3.jpeg" onclick="openModal();currentSlide(23)" class="hover-shadow" id="galleryIMG">
+                                          </div>
+                                          <div class="column" id="galleryPics">
+                                            <img src="Pictures/Bilde4.jpeg" onclick="openModal();currentSlide(24)" class="hover-shadow" id="galleryIMG">
+                                          </div>
+                                          <div class="column" id="galleryPics">
+                                            <img src="Pictures/Bilde5.jpeg" onclick="openModal();currentSlide(25)" class="hover-shadow3" id="galleryIMG">
+                                          </div>
+                                          <div class="column" id="galleryPics">
+                                            <img src="Pictures/Bilde6.jpeg" onclick="openModal();currentSlide(26)" class="hover-shadow3" id="galleryIMG">
+                                          </div>
+                                          <div class="column" id="galleryPics">
+                                            <img src="Pictures/Bilde7.jpeg" onclick="openModal();currentSlide(27)" class="hover-shadow3" id="galleryIMG">
+                                          </div>
+                                          <div class="column" id="galleryPics">
+                                            <img src="Pictures/Bilde8.jpeg" onclick="openModal();currentSlide(28)" class="hover-shadow3" id="galleryIMG">
+                                          </div>
+                                          <div class="column" id="galleryPics">
+                                            <img src="Pictures/Bilde9.jpeg" onclick="openModal();currentSlide(29)" class="hover-shadow3" id="galleryIMG">
+                                          </div>
+                                          <div class="column" id="galleryPics">
+                                            <img src="Pictures/Bilde10.jpeg" onclick="openModal();currentSlide(30)" class="hover-shadow3" id="galleryIMG">
+                                          </div>
+                                          <div class="column" id="galleryPics">
+                                            <img src="Pictures/garazai.jpg" onclick="openModal();currentSlide(31)" class="hover-shadow3" id="galleryIMG">
+                                          </div>
+                                          <div class="column" id="galleryPics">
+                                            <img src="Pictures/majam1.jpeg" onclick="openModal();currentSlide(32)" class="hover-shadow3" id="galleryIMG">
+                                          </div>
+                                          <div class="column" id="galleryPics">
+                                            <img src="Pictures/majam2.jpeg" onclick="openModal();currentSlide(33)" class="hover-shadow3" id="galleryIMG">
+                                          </div>
+                                          <div class="column" id="galleryPics">
+                                            <img src="Pictures/majammapes.jpeg" onclick="openModal();currentSlide(34)" class="hover-shadow3" id="galleryIMG">
+                                          </div>
+                                          <div class="column" id="galleryPics">
+                                            <img src="Pictures/noliktavai.jpeg" onclick="openModal();currentSlide(35)" class="hover-shadow3" id="galleryIMG">
+                                          </div>
+                                          <div class="column" id="galleryPics">
+                                            <img src="Pictures/shell garazai.jpg" onclick="openModal();currentSlide(36)" class="hover-shadow3" id="galleryIMG">
+                                          </div>
+                                          <div class="column" id="galleryPics">
+                                            <img src="Pictures/shellnoliktavai2.jpeg" onclick="openModal();currentSlide(37)" class="hover-shadow3" id="galleryIMG">
+                                          </div>
+                                          <div class="column" id="galleryPics">
+                                            <img src="Pictures/SPECIALIE.jpeg" onclick="openModal();currentSlide(38)" class="hover-shadow3" id="galleryIMG">
+                                          </div>
+                                          <div class="column" id="galleryPics">
+                                            <img src="Pictures/undefined (1).jpeg" onclick="openModal();currentSlide(39)" class="hover-shadow3" id="galleryIMG">
+                                          </div>
+                                          <div class="column" id="galleryPics">
+                                            <img src="Pictures/undefined.jpg" onclick="openModal();currentSlide(40)" class="hover-shadow3" id="galleryIMG">
+                                          </div>
+                                          <div class="column" id="galleryIMGhidden">
+                                            <img src="Pictures/Katalogs.png" onclick="openModal();currentSlide(41)" class="hover-shadow3" id="galleryIMG">
+                                          </div>
+                                
+                                        </div>
+                            
+                                        <!-- END GALLERY -->
+                                      </div>
+                      
+                      
+                      
+                      
+                                      <!-- CONTACTS -->
+                                      <div id="contacts">
+                                          <h3>Контакты</h3>
+                                          <div id="mobile_numb">
+                                              <span>Тел.:</span>  <span id="cont_info">+371 29462385</span>
+                                          </div>
+                                          <div id="email">
+                                              <span>Электронная почта:</span>  <span id="cont_info">info@noliktavai24.lv</span>
+                                          </div>
+                                          <div id="social_media">
+                                          <span>Наша страница в Фейсбук: <a href="https://www.facebook.com/Noliktavai24-116251673837508" class="fa fa-facebook" target="_blank"></a> </span>
+                                              
+                                          </div>
+                                      </div>
+                      
+                      
+                      
+                      
+                                       <!-- MODAL IMAGES -->
+                                       <div id="modal2" class="modal2" onclick="this.style.display='none'">
+                                          <span class="close2" style="cursor: pointer;">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                          <div class="modal-content2">
+                                            <img id="img2" style="max-width:100%">
+                                          </div>
+                                        </div>
+                      
+                      
+                        
+                      
+
+    </body>
+</html>
